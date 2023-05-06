@@ -1,17 +1,17 @@
 .contentSlidertour {
-  position: absolute;
+  /* position: absolute;
   bottom: 0px;
   left: 0;
   width: 100%;
   background: linear-gradient(to bottom, transparent, #000);
-  z-index: 999;
+  z-index: 999; */
 }
 .contentSlidertour .headerSlider {
-  color: white;
+  color: #212529;
   font-size: medium;
 }
 .contentSlidertour .headerSlider {
-  color: white;
+  color: #212529;
 }
 .contentSlidertour .priceTour {
   color: #fff;
@@ -21,10 +21,39 @@
   font-size: 20px;
   color: #e9b131;
 }
+.galleryMT {
+  margin-top: 80px;
+}
 .imageSlider {
   max-width: 100%;
   width: 100%;
   height: 289px;
+}
+.gallerSingelImage img {
+  max-width: 100%;
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  transition: ease-in-out 0.3s;
+  object-fit: cover;
+}
+.gallerSingelImage {
+  position: relative;
+}
+.SeeAll {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #fff;
+  padding: 9px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.SeeAll span {
+  color: #051036;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
 }
 .featureImge img {
   max-width: 100%;
@@ -81,6 +110,114 @@
 main {
   background-color: #fff;
 }
+.swiper {
+  width: 100%;
+  height: 300px;
+}
+.layoutGallery {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000070;
+  display: none;
+  z-index: 100000;
+}
+.closeButton {
+  position: absolute;
+  top: 26%;
+  right: 69px;
+  cursor: pointer;
+}
+.closeButton img {
+  width: 30px;
+  height: 30px;
+}
+.galleryContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layoutGallery.open {
+  display: block;
+}
+.imgSlider img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+.tripAdviser {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.tripAdviser img {
+  max-width: 100%;
+  width: 69%;
+  height: 62px;
+}
+.reviewImgContainer {
+  background-image: url(Crociera\ sul\ Nilo\ e\ Piramidi\ _\ Crociera\ sul\ Nilo\ e\ Cairo_files/reviewImg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 60px 15px 80px;
+  position: relative;
+}
+.reviewHeader span:nth-of-type(1) {
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  text-transform: uppercase;
+
+  font-weight: 600;
+}
+.reviewHeader span:nth-of-type(2) {
+  font-size: 34px;
+  line-height: 38px;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+.reviewHeader span:nth-of-type(2) a {
+  text-decoration: underline !important;
+}
+.reviewLine {
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1px;
+  width: 90px;
+  margin: 0 auto;
+}
+.authorInfo i {
+  color: #e46d30;
+}
+.authorInfo span:nth-of-type(1) {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.authorInfo span:nth-of-type(2) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #bdc2cb;
+}
+.commentAuthor {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #000000;
+}
 @keyframes wiggle {
   5%,
   50% {
@@ -110,16 +247,12 @@ main {
 }
 @media only screen and (min-width: 786px) {
   .contentSlidertour {
-    position: absolute;
-    bottom: 0px;
-    left: 0;
-    width: 100%;
   }
   .button_moblie {
     display: none;
   }
   .contentSlidertour .headerSlider {
-    color: white;
+    color: #212529;
     font-size: 40px;
   }
   .imageSlider {
@@ -134,5 +267,34 @@ main {
   .contentSlidertour .priceTour span {
     font-size: 60px;
     color: #e9b131;
+  }
+  .gallerSingelImage img:hover {
+    transform: scale(0.9);
+  }
+  .galleryMT {
+    margin-top: 120px;
+  }
+  .gallerSingelImage img {
+    border-radius: 10px;
+  }
+
+  .gallerSingelImage.mainImage {
+    height: 100%;
+  }
+  .gallerSingelImage.mainImage img {
+    height: 100%;
+  }
+  .swiper {
+    width: 100%;
+    height: 500px;
+  }
+  .closeButton {
+    top: 14%;
+    right: 118px;
+  }
+  .tripAdviser img {
+    max-width: 100%;
+    width: 26%;
+    height: 60px;
   }
 }
