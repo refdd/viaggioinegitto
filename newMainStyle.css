@@ -218,6 +218,56 @@ main {
   line-height: 1.5;
   color: #000000;
 }
+.cardReview {
+  border-radius: 10px;
+}
+.SingelTaps {
+  border: 1px dashed #cfd3da;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.SingelTaps::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -8px;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #e46d30;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.SingelTaps.active {
+  color: #fff;
+  background-color: #e46d30;
+  border: 1px solid #e46d30;
+}
+.SingelTaps.active::after {
+  opacity: 1;
+}
+.SingelTaps.active span {
+  color: #fff;
+}
+.SingelTaps span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.1428571429;
+  color: #000000;
+}
+.sectionView {
+  display: none;
+}
+.sectionView.active {
+  display: block;
+}
 @keyframes wiggle {
   5%,
   50% {
@@ -296,5 +346,15 @@ main {
     max-width: 100%;
     width: 26%;
     height: 60px;
+  }
+  .SingelTaps:hover::after {
+    opacity: 1;
+  }
+  .SingelTaps:hover {
+    background-color: #e46d30;
+    border: 1px solid #e46d30;
+  }
+  .SingelTaps:hover span {
+    color: #fff;
   }
 }

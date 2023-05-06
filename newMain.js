@@ -3,7 +3,23 @@ const seeGallery = document.querySelector(".SeeAll");
 const gallery = document.querySelector(".layoutGallery");
 const closeButton = document.querySelector(".closeButton");
 const forrmInpuiry = document.getElementById("from");
-
+const taptour = document.querySelectorAll(".SingelTaps");
+const layoutviews = document.querySelectorAll(".sectionView");
+// taps tour function
+function add_and_remove_active_class() {
+  //for in will not work with DOM elements
+  taptour.forEach((elem, i) => {
+    elem.addEventListener("click", () => {
+      for (let index = 0; index < taptour.length; index++) {
+        taptour[index].classList.remove("active");
+        layoutviews[index].classList.remove("active");
+      }
+      elem.classList.add("active");
+      layoutviews[i].classList.add("active");
+    });
+  });
+}
+add_and_remove_active_class();
 // button inqure on scroll event and on click event go to from
 inpuiryButton &&
   inpuiryButton.addEventListener("click", () => {
@@ -50,4 +66,31 @@ const swiper = new Swiper(".swiper", {
   scrollbar: {
     el: ".swiper-scrollbar",
   },
+});
+// reviews slider
+document.addEventListener("DOMContentLoaded", function () {
+  new Splide("#reviewSection", {
+    type: "loop",
+    perPage: 3,
+    perMove: 1,
+    gap: "20px",
+    breakpoints: {
+      1024: {
+        perPage: 3,
+      },
+      767: {
+        perPage: 2,
+      },
+      640: {
+        perPage: 1,
+      },
+      autoScroll: {
+        speed: 2,
+      },
+      autoScroll: {
+        speed: 1,
+      },
+    },
+    pagination: false,
+  }).mount(window.splide.Extensions);
 });
