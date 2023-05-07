@@ -5,6 +5,26 @@ const closeButton = document.querySelector(".closeButton");
 const forrmInpuiry = document.getElementById("from");
 const taptour = document.querySelectorAll(".SingelTaps");
 const layoutviews = document.querySelectorAll(".sectionView");
+// onclick enywhere close gallery section
+window.addEventListener("click", (e) => {
+  // if (e.target !== collbuttom &&
+  // 	e.target !== textCollBack &&
+  // 	e.target !== imageColl &&
+  // 	e.target !== inpuColl &&
+  // 	e.target !== selectedColl &&
+  // 	e.target !== inputNumber &&
+  // 	e.target !== imgSelected &&
+  // 	e.target !== numberCollInBox  &&
+  // 	  !e.target.contains(cellControl)
+  // 	  ) {
+  // 	cellControl.classList.remove("active");
+
+  // }
+  if (e.target == gallery) {
+    gallery.classList.remove("open");
+  }
+  console.log(e.target);
+});
 // taps tour function
 function add_and_remove_active_class() {
   //for in will not work with DOM elements

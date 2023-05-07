@@ -8,7 +8,7 @@
 }
 .contentSlidertour .headerSlider {
   color: #212529;
-  font-size: medium;
+  font-size: 20px;
 }
 .contentSlidertour .headerSlider {
   color: #212529;
@@ -19,7 +19,7 @@
 }
 .contentSlidertour .priceTour span {
   font-size: 20px;
-  color: #e9b131;
+  color: #f06b53;
 }
 .galleryMT {
   margin-top: 80px;
@@ -32,7 +32,7 @@
 .gallerSingelImage img {
   max-width: 100%;
   width: 100%;
-  height: 200px;
+  height: 260px;
   border-radius: 20px;
   transition: ease-in-out 0.3s;
   object-fit: cover;
@@ -126,7 +126,7 @@ main {
 }
 .closeButton {
   position: absolute;
-  top: 26%;
+  top: 7%;
   right: 69px;
   cursor: pointer;
 }
@@ -136,7 +136,7 @@ main {
 }
 .galleryContainer {
   position: absolute;
-  top: 50%;
+  top: 24%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
@@ -268,6 +268,19 @@ main {
 .sectionView.active {
   display: block;
 }
+footer {
+  background-color: #003366;
+}
+#logo_home {
+  background-color: white;
+  width: fit-content;
+  padding: 9px 14px;
+  border-radius: 10px;
+}
+.logoFooter img {
+  width: 244px;
+  height: 68px;
+}
 @keyframes wiggle {
   5%,
   50% {
@@ -316,7 +329,7 @@ main {
   }
   .contentSlidertour .priceTour span {
     font-size: 60px;
-    color: #e9b131;
+    color: #f06b53;
   }
   .gallerSingelImage img:hover {
     transform: scale(0.9);
@@ -335,12 +348,12 @@ main {
     height: 100%;
   }
   .swiper {
-    width: 100%;
-    height: 500px;
+    width: 800px;
+    height: 600px;
   }
   .closeButton {
-    top: 14%;
-    right: 118px;
+    top: 12%;
+    right: 253px;
   }
   .tripAdviser img {
     max-width: 100%;
@@ -356,5 +369,9 @@ main {
   }
   .SingelTaps:hover span {
     color: #fff;
+  }
+  .galleryContainer {
+    top: 40%;
+    left: 50%;
   }
 }
