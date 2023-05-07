@@ -339,6 +339,7 @@ footer {
   }
   .gallerSingelImage img {
     border-radius: 10px;
+    height: 185px;
   }
 
   .gallerSingelImage.mainImage {
